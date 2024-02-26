@@ -5,18 +5,6 @@ let reset = document.querySelector('.btn');
 
 reset.addEventListener('click', () => getRowsCols());
 
-//use mouseover event listener to add or remove class from divs with square class
-gridContainer.addEventListener('mouseover', (e) => {
-  if (e.target.classList.contains('square')) {
-    if (e.target.classList.contains('colored')) {
-      e.target.classList.remove('colored');
-    }
-    else {
-      e.target.classList.add('colored');
-    }
-  };
-})
-
 function createGrid (rows, columns) {
   //set rows or columns to 100 if not provided
   if (rows === 0) rows = 100;
@@ -61,3 +49,16 @@ function getRowsCols () {
 
 //create initial grid using default values for rows and columns
 createGrid(100, 100);
+
+//extras:
+//upon hover, get a random color
+//upon hover, darken the color's opacity from 0 to 100 in 10 interctions
+
+gridContainer.addEventListener('mouseover', (e) => {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  if (e.target.classList.contains('square')) {
+    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+  };
+});
