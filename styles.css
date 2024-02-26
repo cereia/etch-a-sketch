@@ -4,3 +4,7 @@
   height: 960px;
   border: 2px solid black;
 }
+
+.colored {
+  background-color: aqua;
+}
