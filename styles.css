@@ -1,10 +1,28 @@
-.main-container {
+body {
   display: flex;
-  width: 960px;
-  height: 960px;
-  border: 2px solid black;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.main-container {
+  margin: 0;
+  padding: 0;
+  max-width: 1000px;
+  min-height: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.square {
+  flex-grow: 1;
 }
 
 .colored {
   background-color: aqua;
+}
+
+.row-container{
+  display: flex;
 }

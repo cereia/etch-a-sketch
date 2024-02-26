@@ -26,12 +26,9 @@ function createGrid (rows, columns) {
 
     //creates a full row (number of columns)
     for (let j = 0; j < columns; j++) {
-      let square;
-      square = document.createElement('div');
+      let square = document.createElement('div');
       square.className = 'square';
-
-      //to give a visual representation of the squares
-      square.style = "height: 20px; width: 20px; border: 1px solid black"; 
+      square.style = `min-width: ${1000 / columns}px;`;
 
       //attach squares to the row div
       row.appendChild(square);
@@ -41,4 +38,4 @@ function createGrid (rows, columns) {
   }
 }
 
-createGrid(20, 20);
+createGrid(100, 100);
