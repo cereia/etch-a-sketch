@@ -47,13 +47,8 @@ function getRowsCols () {
   createGrid(rowNum, colNum);
 }
 
-//create initial grid using default values for rows and columns
-createGrid(100, 100);
-
-//extras:
 //upon hover, get a random color
-//upon hover, darken the color's opacity from 0 to 100 in 10 interctions
-
+//will not flip to white when hovered over again
 gridContainer.addEventListener('mouseover', (e) => {
   let r = Math.floor(Math.random() * 256);
   let g = Math.floor(Math.random() * 256);
@@ -62,3 +57,6 @@ gridContainer.addEventListener('mouseover', (e) => {
     e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
   };
 });
+
+//create initial grid using default values for rows and columns
+createGrid(100, 100);
